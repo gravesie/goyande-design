@@ -5,9 +5,13 @@ logo, colours, typography and supporting graphics.
 
 ## Start here
 
-- **`Goyande-Brand-Guidelines-V0-3.html`** — the brand guidelines. Open in a
-  browser. Covers the logo, the navy/teal palette, Manrope typography, the
-  gradient, usage rules and the PGGI co-brand lockup.
+- **`BRAND.md`** — the brand definition in plain Markdown: palette (with hex),
+  typography, gradient, logo rules, straplines, voice and the asset index. This
+  is the file to read if you're an agent styling something for Goyande.
+- **`brand-tokens.json`** — the same colours, fonts and gradient as
+  machine-readable tokens, for programmatic theming.
+- **`Goyande-Brand-Guidelines-V0-3.html`** — the full visual guidelines. Open in
+  a browser to see everything laid out, including the PGGI co-brand lockup.
 
 ## assets/
 

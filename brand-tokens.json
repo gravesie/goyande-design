@@ -1,0 +1,105 @@
+{
+  "brand": "Goyande",
+  "version": "0-3",
+  "status": "working draft",
+  "source": "Goyande-Brand-Guidelines-V0-3.html",
+  "color": {
+    "navy": { "hex": "#102A4C", "name": "Deep Navy", "use": "primary, text, dark grounds" },
+    "teal": { "hex": "#10B981", "name": "Agent Teal", "use": "accent only, used sparingly" },
+    "steel": { "hex": "#475569", "name": "Steel", "use": "secondary text" },
+    "paper": { "hex": "#F8FAFC", "name": "Paper", "use": "off-white light background" },
+    "line": { "hex": "#E2E8F0", "use": "hairline borders, dividers" },
+    "muted": { "hex": "#64748B", "use": "muted captions" },
+    "mutedOnDark": { "hex": "#94A3B8", "use": "secondary text on navy" },
+    "tealLight": { "hex": "#5EEAD4", "use": "teal label text on dark grounds" },
+    "negative": { "hex": "#E11D48", "use": "error / don't markers only, not a brand colour" }
+  },
+  "accessibility": {
+    "navyOnWhite": "WCAG AA for body text",
+    "whiteOnNavy": "WCAG AA for body text",
+    "tealOnWhite": "large text, graphic shapes and the mark only; not small body text"
+  },
+  "gradient": {
+    "balanced": {
+      "css": "linear-gradient(135deg, #10B981 0%, #102A4C 68%)",
+      "default": true,
+      "use": "any impact surface, including ones with text"
+    },
+    "vivid": {
+      "css": "linear-gradient(135deg, #10B981 0%, #102A4C 96%)",
+      "default": false,
+      "use": "surfaces with no text only (app splash, divider)"
+    },
+    "rules": {
+      "direction": "green sweeps from top-left; text and wordmark sit over the navy side",
+      "markOnGradient": "flat white only; never apply the gradient to the mark",
+      "lotusOpacityOnGradient": { "outer": 0.4, "inner": 0.85, "centre": 1.0 },
+      "usage": "use sparingly; keep off body text and one-colour print"
+    }
+  },
+  "typography": {
+    "family": "Manrope",
+    "license": "SIL Open Font Licence",
+    "stack": "'Manrope', 'Segoe UI', system-ui, sans-serif",
+    "lineHeight": 1.55,
+    "weights": {
+      "display": 800,
+      "heading": 700,
+      "wordmarkSubhead": 600,
+      "emphasis": 500,
+      "body": 400
+    }
+  },
+  "wordmark": {
+    "text": "goyande",
+    "case": "lowercase",
+    "weight": 600,
+    "letterSpacing": "-1px"
+  },
+  "logo": {
+    "default": "goyande-lockup-horizontal.svg",
+    "stacked": "goyande-lockup-stacked.svg",
+    "mark": {
+      "shape": "lotus, five petals",
+      "centrePetal": "#10B981",
+      "otherPetals": "#102A4C",
+      "outerPetalOpacity": 0.5
+    },
+    "clearSpace": "height of one petal cluster (≈ centre petal height)",
+    "minSize": {
+      "fullLockup": { "screen": "120px", "print": "28mm" },
+      "markAlone": "24px",
+      "belowMarkMin": "use the simplified three-petal favicon"
+    },
+    "variants": {
+      "reversed": "dark grounds",
+      "monoNavy": "one-colour print",
+      "appIcon": "navy rounded square with white/teal lotus",
+      "favicon": "three petals, 16-24px"
+    }
+  },
+  "straplines": {
+    "primary": "Go beyond automation.",
+    "secondary": "Practical AI. Automated efficiency."
+  },
+  "values": {
+    "wise": "judgement over raw automation; agents that reason and make good calls",
+    "human": "built around the people who use them; plain language, humans in the loop, final say with the client"
+  },
+  "voice": [
+    "Plain English",
+    "Practical over futuristic",
+    "Calm and certain",
+    "Specific",
+    "Human"
+  ],
+  "misuse": [
+    "don't stretch or distort",
+    "don't recolour",
+    "don't rotate",
+    "don't put the navy mark on the gradient (use flat white)",
+    "don't add drop shadows or outlines",
+    "don't crowd it",
+    "don't rebuild the wordmark in a different typeface"
+  ]
+}
