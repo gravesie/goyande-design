@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goyande — Brand Guidelines V0-3</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+  :root{
+    --navy:#102A4C; --teal:#10B981; --steel:#475569; --paper:#F8FAFC;
+    --line:#E2E8F0; --ink:#102A4C; --mut:#64748B;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Manrope','Segoe UI',system-ui,sans-serif;color:var(--ink);background:#FFFFFF;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:920px;margin:0 auto;padding:0 28px;}
+  header.cover{background:var(--navy);color:#fff;padding:72px 0 64px;}
+  header.cover .wrap{display:flex;flex-direction:column;gap:26px;}
+  .cover-mark{display:flex;align-items:center;gap:20px;}
+  .cover-word{font-size:46px;font-weight:600;letter-spacing:-1.5px;}
+  .cover-strap{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#5EEAD4;}
+  .cover h1{font-size:15px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#94A3B8;margin:18px 0 0;}
+  .cover .ver{font-size:12.5px;color:#94A3B8;margin-top:4px;}
+  section{padding:48px 0;border-bottom:1px solid var(--line);}
+  h2{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin:0 0 6px;}
+  h3{font-size:24px;font-weight:700;letter-spacing:-0.5px;margin:0 0 18px;}
+  p{margin:0 0 14px;max-width:62ch;}
+  p.lead{font-size:17px;color:var(--steel);}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;}
+  .panel.dark{background:var(--navy);border-color:#1E3A63;}
+  .panel.paper{background:var(--paper);}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  @media(max-width:680px){.grid2,.grid3,.grid4{grid-template-columns:1fr 1fr;}}
+  .center{display:flex;align-items:center;justify-content:center;}
+  .lockup{display:flex;align-items:center;gap:18px;}
+  .word{font-size:38px;font-weight:600;letter-spacing:-1px;color:var(--navy);line-height:1;}
+  .word.rev{color:#fff;}
+  .strap{font-size:10px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--steel);margin-top:7px;}
+  .strap.rev{color:#94A3B8;}
+  .lab{font-size:11.5px;color:var(--mut);margin-top:10px;}
+  .swatch{border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  .swatch .fill{height:84px;}
+  .swatch .meta{padding:10px 12px;}
+  .swatch .nm{font-size:13px;font-weight:700;}
+  .swatch .hx{font-size:12px;color:var(--mut);font-variant-numeric:tabular-nums;}
+  .swatch .use{font-size:11px;color:var(--mut);margin-top:3px;}
+  .do,.dont{border-radius:12px;padding:18px;border:1px solid var(--line);min-height:128px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;}
+  .tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+  .tag.y{color:var(--teal);}
+  .tag.n{color:#E11D48;}
+  .small{font-size:12.5px;color:var(--mut);}
+  ul.tov{list-style:none;padding:0;margin:0;display:grid;gap:12px;}
+  ul.tov li{padding-left:18px;position:relative;}
+  ul.tov li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--teal);}
+  .vals{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px;}
+  @media(max-width:680px){.vals{grid-template-columns:1fr;}}
+  .val{border:1px solid var(--line);border-radius:14px;padding:20px;}
+  .val .k{font-size:20px;font-weight:800;color:var(--navy);}
+  .val .v{font-size:13.5px;color:var(--steel);margin-top:6px;}
+  table.assets{width:100%;border-collapse:collapse;font-size:13.5px;}
+  table.assets th,table.assets td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);}
+  table.assets th{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--mut);font-weight:700;}
+  table.assets code{font-size:12.5px;background:var(--paper);padding:2px 6px;border-radius:5px;}
+  footer{padding:36px 0 64px;color:var(--mut);font-size:12.5px;}
+  .clearbox{position:relative;display:inline-block;padding:32px;background:var(--paper);border-radius:12px;}
+  .clearbox::before{content:"";position:absolute;inset:14px;border:1px dashed #94A3B8;border-radius:6px;}
+  /* gradients */
+  .grad-balanced{background:linear-gradient(135deg,#10B981 0%,#102A4C 68%);}
+  .grad-vivid{background:linear-gradient(135deg,#10B981 0%,#102A4C 96%);}
+  .gcard{border-radius:14px;overflow:hidden;border:1px solid var(--line);}
+  .gface{height:140px;display:flex;align-items:center;gap:16px;padding:0 22px;}
+  .gword{font-size:24px;font-weight:600;letter-spacing:-.7px;color:#fff;line-height:1;}
+  .gsl{font-size:10px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:#fff;opacity:.92;margin-top:6px;}
+  .gmeta{padding:10px 13px;background:#fff;}
+  .gt{font-size:12.5px;font-weight:700;color:var(--navy);}
+  .gd{font-size:11px;color:var(--mut);margin-top:2px;}
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="wrap">
+    <div class="cover-mark">
+      <svg width="70" height="70" viewBox="0 0 64 64" aria-label="Goyande mark reversed">
+        <path d="M32,48 C23,46 14,42 10,35 C19,34 29,41 32,48 Z" fill="#FFFFFF" opacity="0.45"/>
+        <path d="M32,48 C41,46 50,42 54,35 C45,34 35,41 32,48 Z" fill="#FFFFFF" opacity="0.45"/>
+        <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#FFFFFF"/>
+        <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#FFFFFF"/>
+        <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#10B981"/>
+      </svg>
+      <div>
+        <div class="cover-word">goyande</div>
+        <div class="cover-strap">Go beyond automation</div>
+      </div>
+    </div>
+    <div>
+      <h1>Brand guidelines</h1>
+      <div class="ver">Version 0-3 &middot; working draft &middot; adds the gradient impact surface and the two values</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>The idea</h2>
+    <h3>A practical agentic AI agency</h3>
+    <p class="lead">Goyande helps companies get started with AI in a practical way and benefit from better automation and efficiency. We put human-like judgement into autonomous agents, so processes get smarter rather than just faster.</p>
+    <p>The name draws on two Apache words, wise and human. We treat those as the two values behind the company, not just a translation of the name.</p>
+    <div class="vals">
+      <div class="val"><div class="k">Wise</div><div class="v">Judgement over raw automation. Agents that reason about the work and make good calls, not just fast ones.</div></div>
+      <div class="val"><div class="k">Human</div><div class="v">Built around the people who use them. Plain language, humans kept in the loop, the final say stays with you.</div></div>
+    </div>
+    <p class="small" style="margin-top:16px;">These two values sit behind the messaging and copy. They are not a strapline and not part of the logo; they guide how Goyande talks and what it promises.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Logo</h2>
+    <h3>Lockups</h3>
+    <p>The horizontal lockup is the default. Use the stacked version where width is tight, such as a square avatar or a centred footer. The mark may be used on its own once the brand is established, as an app icon, favicon or social avatar.</p>
+    <div class="grid2" style="margin-top:8px;">
+      <div class="panel center" style="min-height:150px;">
+        <div class="lockup">
+          <svg width="58" height="58" viewBox="0 0 64 64">
+            <path d="M32,48 C23,46 14,42 10,35 C19,34 29,41 32,48 Z" fill="#102A4C" opacity="0.5"/>
+            <path d="M32,48 C41,46 50,42 54,35 C45,34 35,41 32,48 Z" fill="#102A4C" opacity="0.5"/>
+            <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#102A4C"/>
+            <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#102A4C"/>
+            <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#10B981"/>
+          </svg>
+          <div><div class="word">goyande</div><div class="strap">Go beyond automation</div></div>
+        </div>
+      </div>
+      <div class="panel center" style="min-height:150px;">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+          <svg width="50" height="50" viewBox="0 0 64 64">
+            <path d="M32,48 C23,46 14,42 10,35 C19,34 29,41 32,48 Z" fill="#102A4C" opacity="0.5"/>
+            <path d="M32,48 C41,46 50,42 54,35 C45,34 35,41 32,48 Z" fill="#102A4C" opacity="0.5"/>
+            <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#102A4C"/>
+            <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#102A4C"/>
+            <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#10B981"/>
+          </svg>
+          <div style="text-align:center;"><div class="word" style="font-size:28px;">goyande</div><div class="strap">Go beyond automation</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Clear space &amp; minimum size</h2>
+    <h3>Give it room</h3>
+    <p>Keep clear space around the logo equal to the height of one petal cluster (roughly the height of the mark's centre petal). Nothing else sits inside that margin. Do not place the logo on a busy photo without a solid holding shape behind it.</p>
+    <div class="grid2" style="margin-top:8px;">
+      <div class="panel center">
+        <div class="clearbox">
+          <svg width="58" height="58" viewBox="0 0 64 64">
+            <path d="M32,48 C23,46 14,42 10,35 C19,34 29,41 32,48 Z" fill="#102A4C" opacity="0.5"/>
+            <path d="M32,48 C41,46 50,42 54,35 C45,34 35,41 32,48 Z" fill="#102A4C" opacity="0.5"/>
+            <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#102A4C"/>
+            <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#102A4C"/>
+            <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#10B981"/>
+          </svg>
+        </div>
+      </div>
+      <div class="panel">
+        <p class="small" style="margin-top:0;"><strong>Minimum sizes.</strong></p>
+        <p class="small">Full lockup: no smaller than 120px wide on screen, or 28mm in print.</p>
+        <p class="small">Mark on its own: no smaller than 24px. Below 24px, use the simplified favicon (three petals), which drops the two faint outer petals so it stays clean.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Colour</h2>
+    <h3>Palette</h3>
+    <p>Deep Navy carries the brand and builds the corporate trust an enterprise buyer expects. Agent Teal is the single accent: growth, action, the live part of the system. Use teal sparingly, on the one thing you want noticed. Steel is for secondary text. Paper is the off-white background.</p>
+    <div class="grid4" style="margin-top:8px;">
+      <div class="swatch"><div class="fill" style="background:#102A4C;"></div><div class="meta"><div class="nm">Deep Navy</div><div class="hx">#102A4C</div><div class="use">Primary, text, dark grounds</div></div></div>
+      <div class="swatch"><div class="fill" style="background:#10B981;"></div><div class="meta"><div class="nm">Agent Teal</div><div class="hx">#10B981</div><div class="use">Accent only</div></div></div>
+      <div class="swatch"><div class="fill" style="background:#475569;"></div><div class="meta"><div class="nm">Steel</div><div class="hx">#475569</div><div class="use">Secondary text</div></div></div>
+      <div class="swatch"><div class="fill" style="background:#F8FAFC;border-bottom:1px solid var(--line);"></div><div class="meta"><div class="nm">Paper</div><div class="hx">#F8FAFC</div><div class="use">Light background</div></div></div>
+    </div>
+    <p class="small" style="margin-top:16px;">Accessibility: navy on white and white on navy both clear WCAG AA for body text. Teal on white is fine for large text, graphic shapes and the mark, but do not set small body text in teal on a white background.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Impact surface</h2>
+    <h3>The brand gradient</h3>
+    <p>A teal-to-navy gradient for high-impact moments: the website hero, a LinkedIn banner, social and link-preview cards, a deck's title and divider slides, an app splash. It is a background surface only. It is never applied to the mark, and the mark on top stays flat white.</p>
+    <div class="grid2" style="margin-top:8px;">
+      <div class="gcard">
+        <div class="gface grad-balanced">
+          <svg width="48" height="48" viewBox="0 0 64 64" style="flex:none;">
+            <path d="M32,48 C23,46 14,42 10,35 C19,34 29,41 32,48 Z" fill="#fff" opacity=".4"/>
+            <path d="M32,48 C41,46 50,42 54,35 C45,34 35,41 32,48 Z" fill="#fff" opacity=".4"/>
+            <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#fff" opacity=".85"/>
+            <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#fff" opacity=".85"/>
+            <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#fff"/>
+          </svg>
+          <div><div class="gword">goyande</div><div class="gsl">Go beyond automation</div></div>
+        </div>
+        <div class="gmeta"><div class="gt">Balanced &middot; default</div><div class="gd"><code>linear-gradient(135deg, #10B981 0%, #102A4C 68%)</code></div></div>
+      </div>
+      <div class="gcard">
+        <div class="gface grad-vivid">
+          <svg width="48" height="48" viewBox="0 0 64 64" style="flex:none;">
+            <path d="M32,48 C23,46 14,42 10,35 C19,34 29,41 32,48 Z" fill="#fff" opacity=".4"/>
+            <path d="M32,48 C41,46 50,42 54,35 C45,34 35,41 32,48 Z" fill="#fff" opacity=".4"/>
+            <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#fff" opacity=".85"/>
+            <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#fff" opacity=".85"/>
+            <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#fff"/>
+          </svg>
+          <div><div class="gword">goyande</div></div>
+        </div>
+        <div class="gmeta"><div class="gt">Vivid &middot; no-text only</div><div class="gd"><code>linear-gradient(135deg, #10B981 0%, #102A4C 96%)</code></div></div>
+      </div>
+    </div>
+
+    <div style="border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:16px;">
+      <div class="grad-balanced" style="aspect-ratio:1128/191;display:flex;align-items:center;padding:0 7%;gap:20px;">
+        <svg width="58" height="58" viewBox="0 0 64 64" style="flex:none;">
+          <path d="M32,48 C23,46 14,42 10,35 C19,34 29,41 32,48 Z" fill="#fff" opacity=".4"/>
+          <path d="M32,48 C41,46 50,42 54,35 C45,34 35,41 32,48 Z" fill="#fff" opacity=".4"/>
+          <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#fff" opacity=".85"/>
+          <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#fff" opacity=".85"/>
+          <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#fff"/>
+        </svg>
+        <div>
+          <div style="font-size:30px;font-weight:600;letter-spacing:-1px;color:#fff;line-height:1;">goyande</div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-top:7px;">Practical AI. Automated efficiency.</div>
+        </div>
+      </div>
+      <div style="background:#fff;padding:8px 13px;font-size:11px;color:var(--mut);">Example: LinkedIn banner · 1128 × 191 · text sits over the navy side</div>
+    </div>
+
+    <p class="small" style="margin-top:18px;"><strong>Rules.</strong></p>
+    <ul class="tov" style="margin-top:4px;">
+      <li>Green sweeps in from the top-left corner; text and the wordmark always sit over the navy side.</li>
+      <li>The lotus on the gradient is white at graded opacity (outer 40%, inner 85%, centre 100%) so the petals stay distinct.</li>
+      <li>Balanced is the default. Use Vivid only where there is no text on the surface, such as an app splash or a divider.</li>
+      <li>Use the gradient sparingly. It is the exception that makes the navy look richer, not a default background. Keep it off body text and one-colour print.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Typography</h2>
+    <h3>Manrope</h3>
+    <p>One family does everything: Manrope. It is free and open-source (SIL Open Font Licence), geometric enough to feel technical, humanist enough to feel approachable. The wordmark is set lowercase in SemiBold with tight tracking.</p>
+    <div class="panel paper" style="margin-top:8px;">
+      <div style="font-size:40px;font-weight:600;letter-spacing:-1px;color:var(--navy);">goyande</div>
+      <hr style="border:none;border-top:1px solid var(--line);margin:18px 0;">
+      <div style="display:flex;gap:34px;flex-wrap:wrap;">
+        <div><div style="font-size:26px;font-weight:800;">Aa</div><div class="small">ExtraBold 800 — display</div></div>
+        <div><div style="font-size:26px;font-weight:700;">Aa</div><div class="small">Bold 700 — headings</div></div>
+        <div><div style="font-size:26px;font-weight:600;">Aa</div><div class="small">SemiBold 600 — wordmark, subheads</div></div>
+        <div><div style="font-size:26px;font-weight:500;">Aa</div><div class="small">Medium 500 — emphasis</div></div>
+        <div><div style="font-size:26px;font-weight:400;">Aa</div><div class="small">Regular 400 — body</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Voice</h2>
+    <h3>Straplines</h3>
+    <p>Two lines, two jobs. Use the primary line as the brand signature under the logo and on the website hero. Use the secondary line where a buyer needs to know exactly what you do in plain terms, such as the LinkedIn tagline, an email footer or a meta description.</p>
+    <div class="grid2" style="margin-top:8px;">
+      <div class="panel dark">
+        <div class="strap" style="color:#5EEAD4;">Primary &middot; brand line</div>
+        <div style="font-size:26px;font-weight:700;color:#fff;margin-top:8px;">Go beyond automation.</div>
+        <p class="small" style="color:#94A3B8;margin-top:10px;">Plays on the name (Goyande / go beyond). Short, active, sits under the logo.</p>
+      </div>
+      <div class="panel">
+        <div class="strap" style="color:var(--teal);">Secondary &middot; explainer</div>
+        <div style="font-size:26px;font-weight:700;color:var(--navy);margin-top:8px;">Practical AI. Automated efficiency.</div>
+        <p class="small" style="margin-top:10px;">Tells a sceptical operations director what they get. No hype. For bios and descriptions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Variants</h2>
+    <h3>Reversed, single colour, icon</h3>
+    <div class="grid4" style="margin-top:8px;">
+      <div class="panel dark center" style="min-height:120px;">
+        <svg width="46" height="46" viewBox="0 0 64 64">
+          <path d="M32,48 C23,46 14,42 10,35 C19,34 29,41 32,48 Z" fill="#FFFFFF" opacity="0.45"/>
+          <path d="M32,48 C41,46 50,42 54,35 C45,34 35,41 32,48 Z" fill="#FFFFFF" opacity="0.45"/>
+          <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#FFFFFF"/>
+          <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#FFFFFF"/>
+          <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#10B981"/>
+        </svg>
+      </div>
+      <div class="panel center" style="min-height:120px;">
+        <svg width="46" height="46" viewBox="0 0 64 64">
+          <path d="M32,48 C23,46 14,42 10,35 C19,34 29,41 32,48 Z" fill="#102A4C"/>
+          <path d="M32,48 C41,46 50,42 54,35 C45,34 35,41 32,48 Z" fill="#102A4C"/>
+          <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#102A4C"/>
+          <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#102A4C"/>
+          <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#102A4C"/>
+        </svg>
+      </div>
+      <div class="panel center" style="min-height:120px;">
+        <svg width="62" height="62" viewBox="0 0 80 80">
+          <rect width="80" height="80" rx="20" fill="#102A4C"/>
+          <g transform="translate(8,9)">
+            <path d="M32,48 C23,46 14,42 10,35 C19,34 29,41 32,48 Z" fill="#FFFFFF" opacity="0.5"/>
+            <path d="M32,48 C41,46 50,42 54,35 C45,34 35,41 32,48 Z" fill="#FFFFFF" opacity="0.5"/>
+            <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#FFFFFF"/>
+            <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#FFFFFF"/>
+            <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#10B981"/>
+          </g>
+        </svg>
+      </div>
+      <div class="panel center" style="min-height:120px;">
+        <svg width="44" height="44" viewBox="0 0 80 80">
+          <rect width="80" height="80" rx="16" fill="#102A4C"/>
+          <g transform="translate(8,9)">
+            <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#FFFFFF"/>
+            <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#FFFFFF"/>
+            <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#10B981"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <p class="small" style="margin-top:10px;">Left to right: reversed (dark grounds), mono navy (one-colour print), app icon, favicon.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Misuse</h2>
+    <h3>What not to do</h3>
+    <div class="grid4" style="margin-top:8px;">
+      <div class="dont">
+        <svg width="40" height="40" viewBox="0 0 64 64" preserveAspectRatio="none" style="width:64px;height:34px;">
+          <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#102A4C"/>
+          <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#102A4C"/>
+          <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#10B981"/>
+        </svg>
+        <div class="tag n">Don't stretch</div>
+      </div>
+      <div class="dont">
+        <svg width="40" height="40" viewBox="0 0 64 64">
+          <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#7C3AED"/>
+          <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#7C3AED"/>
+          <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#F59E0B"/>
+        </svg>
+        <div class="tag n">Don't recolour</div>
+      </div>
+      <div class="dont">
+        <svg width="40" height="40" viewBox="0 0 64 64" style="transform:rotate(22deg);">
+          <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#102A4C"/>
+          <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#102A4C"/>
+          <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#10B981"/>
+        </svg>
+        <div class="tag n">Don't rotate</div>
+      </div>
+      <div class="dont grad-vivid">
+        <svg width="40" height="40" viewBox="0 0 64 64">
+          <path d="M32,48 C25,42 19,32 18,23 C27,27 31,39 32,48 Z" fill="#102A4C"/>
+          <path d="M32,48 C39,42 45,32 46,23 C37,27 33,39 32,48 Z" fill="#102A4C"/>
+          <path d="M32,48 C28,38 28,22 32,14 C36,22 36,38 32,48 Z" fill="#10B981"/>
+        </svg>
+        <div class="tag n" style="color:#fff;">Don't put the navy mark on the gradient</div>
+      </div>
+    </div>
+    <p class="small" style="margin-top:10px;">Also: do not add drop shadows or outlines to the mark, do not crowd it, and do not rebuild it in a different typeface. The gradient is a background surface with a flat white mark on top, never applied to the mark itself.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Tone of voice</h2>
+    <h3>How Goyande sounds</h3>
+    <ul class="tov">
+      <li>Plain English. Say what the agent does and what the client gets. No jargon walls.</li>
+      <li>Practical over futuristic. Lead with the outcome (hours saved, errors cut), not the technology.</li>
+      <li>Calm and certain. The audience is wary of AI hype, so understatement builds more trust than big claims.</li>
+      <li>Specific. Name the process, the tool, the result. Avoid vague "transformation" language.</li>
+      <li>Human. The brand's values are wise and human; the writing should sound like a sharp colleague, not a chatbot.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Files</h2>
+    <h3>Asset index</h3>
+    <table class="assets">
+      <thead><tr><th>File</th><th>Use</th></tr></thead>
+      <tbody>
+        <tr><td><code>goyande-lockup-horizontal.svg</code></td><td>Default logo, most places</td></tr>
+        <tr><td><code>goyande-lockup-stacked.svg</code></td><td>Square or narrow spaces</td></tr>
+        <tr><td><code>goyande-mark.svg</code></td><td>Mark only, colour</td></tr>
+        <tr><td><code>goyande-mark-reversed.svg</code></td><td>Mark on dark grounds</td></tr>
+        <tr><td><code>goyande-mark-mono-navy.svg</code></td><td>One-colour print</td></tr>
+        <tr><td><code>goyande-mark-white.svg</code></td><td>White knockout (use on the gradient)</td></tr>
+        <tr><td><code>goyande-icon.svg</code></td><td>App icon / social avatar</td></tr>
+        <tr><td><code>goyande-favicon.svg</code></td><td>Favicon, 16–24px</td></tr>
+      </tbody>
+    </table>
+    <p class="small" style="margin-top:16px;">All assets are vector SVG, so they scale to any size with no loss. PNG exports (for LinkedIn and anywhere that rejects SVG), including the gradient banner and social card, are produced from these masters and the gradient values above. The lockup files set the wordmark in Manrope; for final production the text should be converted to outlines so the files do not depend on the font being installed.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Goyande brand guidelines &middot; Version 0-3 (working draft) &middot; Deep Navy #102A4C, Agent Teal #10B981, Manrope. Adds the balanced gradient impact surface and the two values (wise, human). Subject to sign-off before the website and LinkedIn build.</div>
+</footer>
+
+</body>
+</html>

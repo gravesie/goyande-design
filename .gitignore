@@ -1,0 +1,9 @@
+# Internal / out-of-scope for the public brand repo
+old/
+From Claude/
+exports/_build/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
