@@ -1,0 +1,97 @@
+/* ------------------------------------------------------------------ *
+ * Goyande design system — theme tokens
+ * Source of truth: Goyande-Brand-Guidelines-V0-3.html (Version 0-3)
+ * Plain CSS custom properties so a design-system tool can read the
+ * brand as code. See BRAND.md for the rules behind these values.
+ * ------------------------------------------------------------------ */
+
+:root {
+  /* --- Colour -------------------------------------------------------
+     Deep Navy carries the brand. Agent Teal is the single accent —
+     use it sparingly, on the one thing you want noticed. */
+  --goyande-navy:           #102A4C; /* primary, text, dark grounds */
+  --goyande-teal:           #10B981; /* accent only */
+  --goyande-steel:          #475569; /* secondary text */
+  --goyande-paper:          #F8FAFC; /* off-white background */
+  --goyande-white:          #FFFFFF;
+
+  /* Supporting UI tokens (from the guidelines stylesheet) */
+  --goyande-line:           #E2E8F0; /* hairline borders, dividers */
+  --goyande-muted:          #64748B; /* muted captions, fine print */
+  --goyande-muted-on-dark:  #94A3B8; /* secondary text on navy */
+  --goyande-teal-light:     #5EEAD4; /* teal label text on dark grounds */
+  --goyande-negative:       #E11D48; /* error / "don't" markers only — not a brand colour */
+
+  /* Semantic aliases */
+  --goyande-bg:             var(--goyande-white);
+  --goyande-bg-alt:         var(--goyande-paper);
+  --goyande-bg-invert:      var(--goyande-navy);
+  --goyande-text:           var(--goyande-navy);
+  --goyande-text-muted:     var(--goyande-steel);
+  --goyande-text-on-dark:   var(--goyande-white);
+  --goyande-accent:         var(--goyande-teal);
+  --goyande-border:         var(--goyande-line);
+
+  /* --- Typography ---------------------------------------------------
+     One family does everything: Manrope (SIL Open Font Licence). */
+  --goyande-font:           'Manrope', 'Segoe UI', system-ui, sans-serif;
+
+  --goyande-weight-regular:  400; /* body */
+  --goyande-weight-medium:   500; /* emphasis */
+  --goyande-weight-semibold: 600; /* wordmark, subheads */
+  --goyande-weight-bold:     700; /* headings */
+  --goyande-weight-extrabold:800; /* display */
+
+  --goyande-leading-body:   1.55;
+  --goyande-tracking-wordmark: -0.026em; /* ≈ -1px at the wordmark size; lowercase, tight */
+
+  /* Type scale (documented sizes from the guidelines) */
+  --goyande-text-display:   46px; /* cover wordmark / hero */
+  --goyande-text-wordmark:  38px; /* logo wordmark */
+  --goyande-text-h3:        24px; /* section heading */
+  --goyande-text-lead:      17px; /* lead paragraph */
+  --goyande-text-body:      15px; /* body */
+  --goyande-text-eyebrow:   13px; /* uppercase, tracked, teal */
+  --goyande-text-small:     12.5px;
+
+  /* --- Radius (from the guidelines panels/cards) ------------------- */
+  --goyande-radius-sm:      12px;
+  --goyande-radius:         14px;
+  --goyande-radius-lg:      16px;
+
+  /* --- Brand gradient ----------------------------------------------
+     Background surface only. Never applied to the mark; the mark on
+     the gradient is flat white. Text sits over the navy side. */
+  --goyande-gradient-balanced: linear-gradient(135deg, #10B981 0%, #102A4C 68%);
+  --goyande-gradient-vivid:    linear-gradient(135deg, #10B981 0%, #102A4C 96%);
+  --goyande-gradient:          var(--goyande-gradient-balanced); /* default */
+}
+
+/* ------------------------------------------------------------------ *
+ * Primitives — these classes exist in the V0-3 guidelines.
+ * ------------------------------------------------------------------ */
+
+.goyande-wordmark {
+  font-family: var(--goyande-font);
+  font-weight: var(--goyande-weight-semibold);
+  letter-spacing: var(--goyande-tracking-wordmark);
+  text-transform: lowercase;
+  color: var(--goyande-navy);
+  line-height: 1;
+}
+
+/* Impact surface. Default = balanced; use vivid only where there is no
+   text on the surface (app splash, divider). Use sparingly. */
+.goyande-surface-gradient {
+  background: var(--goyande-gradient-balanced);
+  color: var(--goyande-white);
+}
+.goyande-surface-gradient--vivid {
+  background: var(--goyande-gradient-vivid);
+}
+
+/* Dark ground (navy) */
+.goyande-surface-dark {
+  background: var(--goyande-navy);
+  color: var(--goyande-white);
+}

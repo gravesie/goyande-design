@@ -8,6 +8,9 @@ logo, colours, typography and supporting graphics.
 - **`BRAND.md`** — the brand definition in plain Markdown: palette (with hex),
   typography, gradient, logo rules, straplines, voice and the asset index. This
   is the file to read if you're an agent styling something for Goyande.
+- **`goyande-theme.css`** — the design system as code: CSS custom properties
+  for the palette, typography, gradient and radii, plus the brand's utility
+  classes. This is the file a design-system tool should ingest.
 - **`brand-tokens.json`** — the same colours, fonts and gradient as
   machine-readable tokens, for programmatic theming.
 - **`Goyande-Brand-Guidelines-V0-3.html`** — the full visual guidelines. Open in
